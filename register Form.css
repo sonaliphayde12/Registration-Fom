@@ -1,0 +1,264 @@
+body{
+    margin:0;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+} 
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 350px;
+    background-color:black;
+    padding: 20px;
+    border-radius: 20px;
+    position:relative;
+    align-content: center;
+}
+p
+{
+  margin:0;
+  padding: 10px;
+  font-size:60px;
+}
+.title{
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    position:relative;
+    letter-spacing: -1px;
+    display:flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+    
+  }
+  .input{
+    border-radius: 10px;
+    padding:6px;
+    color: #000; /* Fallback for older browsers */
+    
+  }
+  .email{
+    width:330px;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    cursor: pointer;
+  }
+ 
+  .message{
+    color: grey;
+  }
+  .signin{
+    color: gray;
+  }
+  
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+.login{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #0077be, #3b8df2);
+  border-radius: 10px;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  animation: form-animation 0.5s ease-in-out;
+}
+
+@keyframes form-animation {
+  from {
+    transform: rotateX(-30deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.input1 {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  color: rgba(15, 15, 14, 0.897);
+  border: 2px solid #020202;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.input1::placeholder {
+  color: #fff;
+}
+
+.input1:hover,
+.input1:focus {
+  border-color:black;
+  background-color: rgba(11, 10, 10, 0.956);
+  transform: scale(1.05) rotateY(20deg);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color:black;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateX(-10deg);
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button:hover {
+  background-color:black;
+  font-size: 17px;
+  transform: scale(1.05) rotateY(20deg) rotateX(10deg);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.body1{
+  margin:0;
+  padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: black;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: rgba(38, 30, 188, 0.768) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  
+  
+}
+p.sign{
+  
+  
+    margin:0;
+    padding: 10px;
+    font-size:60px;
+    font-size: 28px;
+    color: black;
+    font-weight: 600;
+    position:relative;
+    letter-spacing: -1px;
+    display:flex;
+    align-items: center;
+    padding-left: 8px;
+}
